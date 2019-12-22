@@ -9,8 +9,8 @@ then
 fi
 
 # UPDATE AND UPGRADE
-apt update > ~/updateLogs/$(date "+%F-%T")_update
-apt upgrade -y > ~/updateLogs/$(date "+%F-%T")_upgrade
+apt update > ~/updateLogs/update_$(date "+%F-%T")
+apt upgrade -y > ~/updateLogs/upgrade_$(date "+%F-%T")
 
 # REBOOT IF NECESSARY
 if [ -f /var/run/reboot-required ]
